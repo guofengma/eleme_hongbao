@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bobo.eleme.dao.CookiesDao">
+
+    <resultMap id="BaseResultMap" type="com.bobo.eleme.entity.Cookies">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <id column="openId" jdbcType="VARCHAR" property="openId" />
+        <id column="elemeKey" jdbcType="VARCHAR" property="elemeKey" />
+        <id column="sid" jdbcType="VARCHAR" property="sid" />
+        <id column="phone" jdbcType="VARCHAR" property="phone" />
+    </resultMap>
+
+
+    <select id="selectCookies" resultMap="BaseResultMap">
+        SELECT * FROM eleme_cookies
+    </select>
+
+</mapper>
